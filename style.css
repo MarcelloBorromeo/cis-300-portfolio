@@ -395,7 +395,7 @@ footer {
 .recognition-page {
   padding-top: 7rem;
   padding-bottom: 4rem;
-}
+} 
 
 .recognition-page h1 {
   font-size: 2.4rem;
@@ -410,8 +410,6 @@ footer {
   font-size: 1.1rem;
 }
 
-
-/* ===== VIDEO BOX ===== */
 .video-container {
   width: min(90%, 750px);
   margin: 0 auto 3rem auto;
@@ -427,8 +425,6 @@ footer {
   border-radius: 20px;
 }
 
-
-/* ===== TABLE ===== */
 .table-wrapper {
   overflow-x: auto;
   margin: 0 auto 2.5rem auto;
@@ -462,8 +458,6 @@ footer {
   border-bottom: none;
 }
 
-
-/* ===== DETAILED CARDS ===== */
 .recognition-cards {
   display: flex;
   flex-direction: column;
@@ -491,8 +485,6 @@ footer {
   color: var(--dark);
 }
 
-
-/* ===== SKILLS BOX ===== */
 .skills-box {
   max-width: 900px;
   margin: 2rem auto;
@@ -553,7 +545,6 @@ footer {
   padding: 1.2rem 1.4rem !important;
 }
 
-
 /* ========================== */
 /*      MOBILE OPTIMIZATION   */
 /* ========================== */
@@ -572,7 +563,6 @@ footer {
   }
 }
 
-
 /* ======================================== */
 /*   FIX VIDEO SIZE FOR RECOGNITION PAGE    */
 /* ======================================== */
@@ -588,4 +578,63 @@ footer {
   aspect-ratio: 16 / 9 !important;
   object-fit: cover !important;
   border-radius: 20px !important;
+}
+
+/* ================================================= */
+/*   CONTACT PAGE — FORM VALIDATION + SUCCESS POPUP  */
+/* ================================================= */
+
+.fade-form {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input:valid,
+textarea:valid {
+  border-color: var(--teal);
+  box-shadow: 0 0 8px rgba(0, 140, 140, 0.2);
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+  border-color: var(--terracotta);
+  box-shadow: 0 0 8px rgba(212, 93, 71, 0.25);
+}
+
+/* UPDATED SUCCESS POPUP — CENTERED + WHITE TEXT */
+.success-popup {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--teal);
+  color: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  z-index: 2000;
+
+  /* NEW LINES */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-popup.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get in touch with Marcello Borromeo for opportunities, collaborations, or questions about his work in AI, product management, and data science. Includes a direct contact form and professional links." />
   <title>Contact | Marcello Borromeo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -24,7 +25,7 @@
     <h1>Let’s Connect</h1>
     <p>I’d love to chat about data, product, or new opportunities.</p>
 
-    <form class="contact-form" onsubmit="return false;">
+    <form class="contact-form fade-form" action="#" method="post" id="contactForm">
       <div class="form-row">
         <div class="form-group">
           <label for="name">Name</label>
@@ -50,6 +51,11 @@
       <button type="submit" class="submit-btn">Send Message</button>
     </form>
 
+    <!-- SUCCESS POPUP (FIXED — NO <p> TAG) -->
+    <div id="successPopup" class="success-popup">
+      Your message has been sent successfully!
+    </div>
+
     <div class="contact-direct">
       <p>Or reach out directly:</p>
       <a href="mailto:mborrom2@asu.edu">mborrom2@asu.edu</a> ·
@@ -62,6 +68,24 @@
   <footer>
     © 2025 Marcello Borromeo — Designed & Built by Marcello
   </footer>
+
+  <script>
+    // Fake success popup logic
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("successPopup");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent actual submission
+      popup.classList.add("show");
+
+      setTimeout(() => {
+        popup.classList.remove("show");
+        form.reset();
+      }, 2500);
+    });
+  </script>
+
 </body>
 </html>
+
 
