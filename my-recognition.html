@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Recognition | Marcello Borromeo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recognition — Marcello Borromeo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -19,82 +18,124 @@
     </ul>
   </nav>
 
-  <!-- PAGE HEADER -->
-  <section class="recognition-page fade-in">
-    <h1>My Recognition</h1>
-    <p>A collection of fellowships, leadership roles, and professional milestones shaping my journey in AI, tech, and consulting.</p>
+  <!-- PAGE -->
+  <main class="recognition-page fade-in" role="main" aria-labelledby="page-title">
+    <header style="text-align:center; margin-bottom:1.25rem;">
+      <h1 id="page-title">Recognition</h1>
+      <p style="max-width:760px; margin:0.5rem auto 1.5rem auto; color:var(--dark);">
+        Selected fellowships, leadership experiences, and projects that reflect my work at the intersection of
+        AI, product, and human-centered design.
+      </p>
+    </header>
 
-    <!-- FEATURED VIDEO -->
-    <div class="video-container">
-      <video controls>
-        <source src="videos/cis_300_work_video.mov" type="video/mp4">
-        Your browser does not support the video tag.
+    <!-- VIDEO -->
+    <figure class="video-container" aria-label="Highlight video">
+      <video controls preload="metadata" poster="">
+        <source src="cis_300_work_video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
       </video>
-    </div>
+      <figcaption style="font-size:0.95rem; color:#666; padding:0.6rem 1rem; text-align:left;">
+        Short highlight: Creating a live dashboard to display defect insights to help my manager visualize supply chain package defects.
+      </figcaption>
+    </figure>
 
-    <!-- TABLE -->
-    <h2>Professional Highlights</h2>
+    <!-- HIGHLIGHTS TABLE -->
+    <section aria-labelledby="highlights-heading" style="margin-top:1.5rem;">
+      <h2 id="highlights-heading">Professional Highlights</h2>
 
-    <div class="table-wrapper">
-      <table class="recognition-table">
-        <tr>
-          <th>Role</th>
-          <th>Organization</th>
-          <th>Impact</th>
-        </tr>
+      <div class="table-wrapper" role="region" aria-label="Professional highlights table">
+        <table class="recognition-table">
+          <thead>
+            <tr>
+              <th scope="col">Role</th>
+              <th scope="col">Organization</th>
+              <th scope="col">Result / Impact</th>
+            </tr>
+          </thead>
 
-        <tr>
-          <td>AI/ML Fellow</td>
-          <td>Break Through Tech AI @ Cornell University</td>
-          <td>Selected from 3,000+ applicants; building an AI investor-matching platform using LangGraph + XGBoost.</td>
-        </tr>
+          <tbody>
+            <tr>
+              <td><strong>AI / ML Fellow</strong></td>
+              <td>Break Through Tech AI — Cornell University</td>
+              <td>Selected from 3,000+ applicants; building an investor-matching prototype with LangGraph + XGBoost.</td>
+            </tr>
 
-        <tr>
-          <td>Co-Founder</td>
-          <td>halfglasshustle</td>
-          <td>Built GTM to 140 MAUs; created nutrition algorithm; designing EMR software with SME in $3.5B market.</td>
-        </tr>
+            <tr>
+              <td><strong>Co-Founder</strong></td>
+              <td>halfglasshustle</td>
+              <td>Launched a nutrition algorithm (Iwant_) and GTM, reaching ~140 MAUs; advising EMR design for an SME.</td>
+            </tr>
 
-        <tr>
-          <td>Project Manager</td>
-          <td>TAMID Group</td>
-          <td>Led 5-person consulting team; delivered approved in-app education feature for fintech startup.</td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- DETAIL CARDS -->
-    <div class="recognition-cards">
-
-      <div class="rec-card">
-        <h3>AI/ML Fellow — Break Through Tech AI</h3>
-        <p>Selected from 3,000+ applicants to represent ASU as a minority in tech. Completed a 9-week bootcamp and currently developing an AI investor-matching platform for a Wall Street firm using LangGraph and XGBoost.</p>
+            <tr>
+              <td><strong>Project Manager</strong></td>
+              <td>TAMID Group — Fintech Consulting</td>
+              <td>Led a 5-student team to deliver an in-app education feature to improve retention for a finance app.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+    </section>
 
-      <div class="rec-card">
-        <h3>Co-Founder — halfglasshustle</h3>
-        <p>Founded a tech incubator with four CS students. Built the nutrition algorithm “Iwant_,” scaled to ~140 MAUs, and partnered with an SME to design EMR software solving UX and workflow inefficiencies.</p>
+    <!-- EXPANDED NOTES / SUMMARY CARDS -->
+    <section aria-labelledby="details-heading" style="margin-top:2rem;">
+      <h2 id="details-heading">Selected Projects & Context</h2>
+
+      <div class="recognition-cards" style="margin-top:1rem;">
+        <article class="rec-card" aria-labelledby="fellow-heading">
+          <h3 id="fellow-heading">AI/ML Fellow — Break Through Tech AI</h3>
+          <p>
+            Represented Arizona State University at a 9-week intensive focused on applied ML. Work centers on an
+            investor-matching system for a Wall Street boutique — combining graph tooling (LangGraph) with
+            supervised methods and rigorous validation.
+          </p>
+        </article>
+
+        <article class="rec-card" aria-labelledby="founder-heading">
+          <h3 id="founder-heading">Co-Founder — halfglasshustle</h3>
+          <p>
+            Built an early product and go-to-market for a nutrition algorithm (Iwant_). The incubator team built
+            product momentum (MAUs ~140) while partnering with domain experts to prototype EMR workflows for clinicians.
+          </p>
+        </article>
+
+        <article class="rec-card" aria-labelledby="tamid-heading">
+          <h3 id="tamid-heading">Project Manager — TAMID Consulting</h3>
+          <p>
+            Directed a student consulting engagement delivering a user education feature for a finance app to
+            address retention — from scoping through stakeholder handoff and acceptance testing.
+          </p>
+        </article>
       </div>
-
-      <div class="rec-card">
-        <h3>Project Manager — TAMID Fintech Consulting</h3>
-        <p>Managed a 5-person student team through a semester-long project for a finance app startup, delivering an approved education feature to improve retention.</p>
-      </div>
-
-    </div>
+    </section>
 
     <!-- SKILLS -->
-    <h2>Skills & Courses</h2>
+    <section aria-labelledby="skills-heading" style="margin-top:2rem;">
+      <h2 id="skills-heading">Skills & Courses</h2>
 
-    <div class="skills-box">
-      <h3>Technical Skills</h3>
-      <p>Excel (Pivot Tables, Macros), Python (sklearn, keras, matplotlib, pandas, numpy), SQL (PSQL), Power BI, Looker</p>
+      <div class="skills-box" style="display:flex; flex-wrap:wrap; gap:1rem;">
+        <div style="flex:1; min-width:220px;">
+          <h3>Skills</h3>
+          <ul style="margin-top:0.5rem; line-height:1.6; text-align:left; color:var(--dark);">
+            <li>Technical Product Management — Agile, Shape Up, Jira</li>
+            <li>Strategy — Ideation, Roadmapping, Execution</li>
+            <li>Data Analysis — Python, SQL, Excel, Looker</li>
+            <li>Human-centered Design</li>
+            <li>Lead Acquisition & GTM</li>
+          </ul>
+        </div>
 
-      <h3>Courses</h3>
-      <p>Machine Learning for Business Applications, ML Foundations, Programming for Analytics & AI, Data Warehousing Design</p>
-    </div>
-
-  </section>
+        <div style="flex:1; min-width:220px;">
+          <h3>Courses / Certs</h3>
+          <ul style="margin-top:0.5rem; line-height:1.6; text-align:left; color:var(--dark);">
+            <li>Machine Learning for Business Applications</li>
+            <li>ML Foundations; Programming for Analytics & AI (cert)</li>
+            <li>Data Warehousing Design</li>
+            <li>Google Data Analytics (cert)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>

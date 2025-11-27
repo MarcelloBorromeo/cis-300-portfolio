@@ -410,6 +410,7 @@ footer {
   font-size: 1.1rem;
 }
 
+
 /* ===== VIDEO BOX ===== */
 .video-container {
   width: min(90%, 750px);
@@ -425,6 +426,7 @@ footer {
   display: block;
   border-radius: 20px;
 }
+
 
 /* ===== TABLE ===== */
 .table-wrapper {
@@ -460,6 +462,7 @@ footer {
   border-bottom: none;
 }
 
+
 /* ===== DETAILED CARDS ===== */
 .recognition-cards {
   display: flex;
@@ -488,6 +491,7 @@ footer {
   color: var(--dark);
 }
 
+
 /* ===== SKILLS BOX ===== */
 .skills-box {
   max-width: 900px;
@@ -509,18 +513,79 @@ footer {
   text-align: left;
 }
 
-/* ===== MOBILE ===== */
+/* =============================== */
+/*   RECOGNITION PAGE SPACING FIX  */
+/* =============================== */
+
+.recognition-page {
+  padding-top: 5.2rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.recognition-page > p {
+  margin-bottom: 1.2rem !important;
+}
+
+.video-container {
+  margin-bottom: 1.5rem !important;
+}
+
+.table-wrapper {
+  margin-bottom: 1.2rem !important;
+}
+
+.recognition-cards {
+  gap: 0.9rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.recognition-page h2 {
+  margin-top: 1.2rem !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.skills-box {
+  margin: 1.2rem auto !important;
+  padding: 1.4rem !important;
+}
+
+.rec-card {
+  padding: 1.2rem 1.4rem !important;
+}
+
+
+/* ========================== */
+/*      MOBILE OPTIMIZATION   */
+/* ========================== */
+
 @media (max-width: 800px) {
-  .rec-card {
-    padding: 1.2rem 1.2rem;
+  .video-container {
+    margin-bottom: 1.2rem !important;
   }
 
   .skills-box {
-    padding: 1.5rem;
+    padding: 1.1rem !important;
   }
 
-  .video-container {
-    width: 95%;
+  .rec-card {
+    padding: 1rem 1.2rem !important;
   }
 }
 
+
+/* ======================================== */
+/*   FIX VIDEO SIZE FOR RECOGNITION PAGE    */
+/* ======================================== */
+
+.video-container {
+  width: min(85%, 620px) !important;
+  margin: 0 auto 1.5rem auto !important;
+}
+
+.video-container video {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  border-radius: 20px !important;
+}
